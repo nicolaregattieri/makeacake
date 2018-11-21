@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Signika+Negative:400,700');
 .blackboard {
+	font-family: 'Signika Negative';
 	&__top-img {
 		display: flex;
 		img {
@@ -6,11 +8,116 @@
 			width: 100%;
 		}
 	}
-}
-
-.container {
-	max-width: 1290px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
+	&__row {
+		background-color: #000;
+		border-bottom: 1px solid #fff;
+	}
+	.grid {
+		display: grid;
+		&--wrapper {
+			grid-template-columns: 190px 1fr;
+			padding: 20px 40px;
+		}
+		&--3c {
+			grid-template-columns: repeat(3, minmax(302px, 1fr));
+			grid-template-rows: minmax(60px, 1fr);
+			grid-gap: 20px;
+		}
+		&--6 {
+			grid-template-columns: repeat(3, minmax(302px, 1fr));
+			grid-template-rows: minmax(60px, 1fr) minmax(60px, 1fr);
+			grid-gap: 20px;
+		}
+		&--6c {
+			grid-template-columns: repeat(6, minmax(140px, 1fr));
+			grid-template-rows: minmax(60px, 1fr);
+			grid-gap: 20px;
+		}
+		&--5 {
+			grid-template-columns: repeat(5, minmax(173px, 1fr));
+			grid-template-rows: minmax(60px, 1fr);
+			grid-gap: 20px;
+		}
+	}
+	&__tlt {
+		margin: 0;
+		color: #ffffff;
+		text-align: center;
+		font-size: 24px;
+		font-weight: 400;
+		text-transform: uppercase;
+		width: 180px;
+		align-self: center;
+		justify-self: center;
+	}
+	&__list {
+		margin: 0;
+	}
+	&__item {
+		display: flex;
+		list-style: none;
+		align-items: center;
+		justify-content: space-between;
+		padding: 15px;
+		a {
+			text-decoration: none;
+			color: #fffefe;
+			font-size: 18px;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+	}
+	&__item--red {
+		background-color: #d70d17;
+	}
+	&__item--yellow {
+		background-color: #fbbf00;
+	}
+	&__arrow {
+		content: '';
+		display: inline-flex;
+		width: 13px;
+		height: 13px;
+		border: solid #fbbf00;
+		border-width: 3px 3px 0 0;
+		transform: rotate(45deg);
+		&--red {
+			border-color: #d70d17;
+		}
+	}
+	&__preco {
+		a {
+			color: #1a1a1a;
+			font-size: 16px;
+			font-weight: 400;
+			text-transform: capitalize;
+		}
+		strong {
+			font-size: 22px;
+		}
+	}
+	&__tamanho {
+		a {
+			display: inline-flex;
+			color: #fffefe;
+			font-size: 22px;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin: auto;
+		}
+	}
+	&__tipo {
+		a {
+			color: #1a1a1a;
+			font-size: 18px;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+	}
+	.container {
+		max-width: 1290px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
 }
