@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$fontOpen: "Open Sans', sans-serif";
+
+.cronometro {
+    width: 290px;
+    height: 492px;
+    background: url(../arquivos/bgcronometro.jpg) no-repeat;
+    padding: 220px 20px;
+    margin-right: 20px;
+    &__time {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-family: Arial;
+            font-size: 11px;
+            color: #fff;
+            text-align: center;
+            strong {
+                padding: 5px;
+                color: #000;
+                font-size: 40px;
+                display: block;
+                background: #fff;
+                margin: 0 10px 5px 10px;
+            }
+        }
+    }
+}
+
+section.blackcombo {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin: 60px auto;
+        max-width: 1277px;
+        .box-banner {
+            width: 48%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+section.blackcombo {
+    .container {
+        .box-banner {
+            width: 48%;
+        }
+    }
+}
+
+section.blackcombo {
+    .container {
+        .box-banner {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+section.row.mais-vendidos {
+    padding: 50px 0;
+    .slider {
+        padding: 10px 0;
+    }
+}
