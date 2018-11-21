@@ -1,6 +1,5 @@
 {
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "beeper": "^1.1.1",
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
