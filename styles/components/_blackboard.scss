@@ -193,3 +193,44 @@
 		width: 100%;
 	}
 }
+
+header {
+	section.top-box {
+		background: #000;
+		border-color: #000;
+	}
+	.TipBar li {
+		color: #fff;
+	}
+	.TipBar svg path {
+		fill: #fff;
+	}
+	.mid-box {
+		background: black;
+	}
+	.ambiente,
+	.ambiente.active {
+		color: #fff !important;
+		background-color: black !important;
+		border-color: black !important;
+	}
+	.ambiente.active {
+		color: #d5d5d5 !important;
+	}
+	.fulltext-search-box {
+		background: transparent !important;
+	}
+	.btn-buscar,
+	.search-toggle {
+		background-color: #fbbf00 !important;
+	}
+	.btn-account svg path {
+		fill: #fbbf00 !important;
+	}
+	.btn-miniCartButton #hover-blue {
+		fill: #fbbf00 !important;
+	}
+	.search-box .busca input.btn-buscar {
+		background-image: url(/arquivos/Forma_1.png) !important;
+	}
+}
