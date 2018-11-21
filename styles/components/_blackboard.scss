@@ -1,11 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Signika+Negative:400,700');
+@mixin atMedium {
+	@media (min-width: 1024px) {
+		@content;
+	}
+}
 .blackboard {
 	font-family: 'Signika Negative';
 	&__top-img {
 		display: flex;
+		background-color: #000;
+		background-image: url('/arquivos/pattern.png');
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+		position: relative;
+		&::after {
+			content: '';
+			width: 43px;
+			height: 43px;
+			background-image: url('/arquivos/canto.png');
+			display: flex;
+			position: absolute;
+			right: 0;
+			top: 0;
+			border-bottom: 21.5px solid;
+		}
 		img {
-			min-width: 0;
-			width: 100%;
+			max-width: 100%;
+			width: 70%;
+			@include atMedium {
+				width: auto;
+			}
+			@media (max-width: 600px) {
+				width: 80%;
+			}
+			@media (max-width: 400px) {
+				width: 90%;
+				padding-right: 30px;
+			}
 		}
 	}
 	&__row {
@@ -14,44 +45,85 @@
 	}
 	.grid {
 		display: grid;
+		grid-gap: 5px;
+		padding-bottom: 10px;
+		@include atMedium {
+			grid-gap: initial;
+			padding-bottom: initial;
+		}
 		&--wrapper {
-			grid-template-columns: 190px 1fr;
-			padding: 20px 40px;
+			grid-template-columns: 1fr;
+			@include atMedium {
+				grid-template-columns: 190px 1fr;
+				padding: 20px 40px;
+			}
 		}
 		&--3c {
-			grid-template-columns: repeat(3, minmax(302px, 1fr));
-			grid-template-rows: minmax(60px, 1fr);
-			grid-gap: 20px;
+			@include atMedium {
+				grid-template-columns: repeat(3, minmax(302px, 1fr));
+				grid-template-rows: minmax(60px, 1fr);
+				grid-gap: 20px;
+			}
 		}
 		&--6 {
-			grid-template-columns: repeat(3, minmax(302px, 1fr));
-			grid-template-rows: minmax(60px, 1fr) minmax(60px, 1fr);
-			grid-gap: 20px;
+			@include atMedium {
+				grid-template-columns: repeat(3, minmax(200px, 1fr));
+				grid-template-rows: minmax(60px, 1fr) minmax(60px, 1fr);
+				grid-gap: 20px;
+			}
 		}
 		&--6c {
-			grid-template-columns: repeat(6, minmax(140px, 1fr));
-			grid-template-rows: minmax(60px, 1fr);
-			grid-gap: 20px;
+			grid-template-columns: repeat(2, 1fr);
+			@include atMedium {
+				grid-template-columns: repeat(6, minmax(140px, 1fr));
+				grid-template-rows: minmax(60px, 1fr);
+				grid-gap: 20px;
+			}
 		}
 		&--5 {
-			grid-template-columns: repeat(5, minmax(173px, 1fr));
-			grid-template-rows: minmax(60px, 1fr);
-			grid-gap: 20px;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: minmax(60px, 1fr) minmax(60px, 1fr) 1fr;
+			grid-template-areas: 'a b' 'c d' 'e e';
+			@include atMedium {
+				grid-template-columns: repeat(5, minmax(173px, 1fr));
+				grid-template-rows: minmax(60px, 1fr);
+				grid-gap: 20px;
+				grid-template-areas: 'a b c d e';
+			}
+			li:last-child {
+				grid-area: e;
+				a {
+					margin: 0 auto;
+				}
+				@include atMedium {
+					grid-area: initial;
+					a {
+						margin: initial;
+					}
+				}
+			}
 		}
 	}
 	&__tlt {
-		margin: 0;
 		color: #ffffff;
 		text-align: center;
 		font-size: 24px;
 		font-weight: 400;
 		text-transform: uppercase;
-		width: 180px;
+		margin: 20px auto;
 		align-self: center;
 		justify-self: center;
+		@include atMedium {
+			margin: 0;
+			width: 180px;
+		}
 	}
 	&__list {
 		margin: 0;
+		padding: 0 10px;
+		@include atMedium {
+			padding: 0;
+		}
 	}
 	&__item {
 		display: flex;
